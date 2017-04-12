@@ -1,0 +1,7 @@
+prload nutsbolts; % Load the mechanical parts dataset
+w_l = ldc(z,0,0.7); % Train a linear classifier on z
+w_q = qdc(z,0,0.5); % Train a quadratic classifier on z
+figure; scatterd(z); % Show scatter diagram of z
+plotc(w_l); % Plot the first classifier
+plotc(w_q,':'); % Plot the second classifier
+[0.4 0.2]*w_l*labeld % Classify a new object with z = [0.4 0.2]
