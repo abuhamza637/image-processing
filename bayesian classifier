@@ -1,0 +1,9 @@
+load nutsbolts; % Load the dataset; 
+w=gaussm(z,1); % Estimate a mixture of Gaussians
+figure(1); scatterd (z); hold on;
+plotm(w,6,[0.1 0.5 1.0]); % Plot in 3D
+figure(2); scatterd (z); hold on;
+for c = 1: 4
+w=gaussm(seldat(z,c),1); % Estimate a Gaussian per class
+plotm(w,2,[0.1 0.5 1.0]); % Plot in 2D
+end;
